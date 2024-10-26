@@ -13,7 +13,7 @@ export default function Navbar() {
     return (
         <nav className="min-h-[10vh] max-h-[10vh] flex flex-row justify-between items-center bg-white px-6 shadow-md">
             <Link to="/" className="text-2xl font-bold text-black hover:text-blue-700 transition-colors">
-                Inicio
+                Logo
             </Link>
             <ul className="flex flex-row gap-6">
                 {user.isLoggedIn && user.userSession?.t_rol==2&&(
@@ -78,3 +78,4 @@ export default function Navbar() {
         </nav>
     );
 }
+

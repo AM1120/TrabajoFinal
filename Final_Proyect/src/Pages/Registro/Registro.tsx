@@ -23,12 +23,12 @@ export default function Registro() {
     console.log(formData);
 
     try {
-      const res = await fetch('https://servidor-2-uok1.onrender.com/api/crear-cliente', {
+      const res = await fetch('', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json', // Aseguramos que el tipo de contenido sea JSON
+          'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData), // Convertimos los datos a formato JSON
+        body: JSON.stringify(formData),
       });
 
       if (res.ok) {
@@ -36,7 +36,7 @@ export default function Registro() {
         console.log(datos);
         setMsj(datos.message);
       } else {
-        const errorData = await res.json(); // Intentamos obtener más información del error
+        const errorData = await res.json();
         setMsj(`Error: ${errorData.message || "Ocurrió un problema en el servidor."}`);
       }
     } catch (error) {

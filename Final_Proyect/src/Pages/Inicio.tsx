@@ -2,7 +2,7 @@ export default function Inicio(){
 
     const perfil={
         id:1,
-        name:"lucas",
+        name:"",
         auth:false
     }
 
